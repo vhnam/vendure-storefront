@@ -1,0 +1,36 @@
+<header>
+  <div class="flex items-center bg-slate-900 px-4 py-2 md:px-8 text-white">
+    <i-tabler name="truck-delivery"></i-tabler>
+    <p class="text-[0.5rem] sm:text-sm pl-2">
+      FREE SHIPPING FOR PURCHASES OVER $200 WITHIN SINGAPORE ONLY!
+    </p>
+  </div>
+  <div
+    class="flex sm:block items-center justify-between px-2 py-2 sm:p-4 md:py-10 md:px-8 text-center"
+  >
+    <button class="h-10 w-10 sm:hidden" (click)="toggle()">
+      <i-tabler name="menu"></i-tabler>
+    </button>
+    <div class="py-2">
+      <img
+        class="h-8 sm:h-16 mx-auto mb-2"
+        src="/assets/logo.svg"
+        alt="Vendure"
+      />
+      <p class="hidden sm:block text-sm italic text-gray-500 font-light">
+        Sharply focused on meeting your needs...
+      </p>
+    </div>
+    <div class="sm:hidden w-6">&nbsp;</div>
+  </div>
+  <ul class="flex justify-center items-center gap-8 pb-4">
+    <li *ngFor="let navItem of navItems">
+      <a
+        href="{{ navItem.url }}"
+        class="relative uppercase font-semibold hover:text-sky-500 hover:after:content-[''] hover:after:absolute hover:after:bottom-[-0.5rem] hover:after:left-0 hover:after:right-0 hover:after:border hover:after:border-sky-500"
+        >{{ navItem.label }}</a
+      >
+    </li>
+  </ul>
+  <hr />
+</header>
